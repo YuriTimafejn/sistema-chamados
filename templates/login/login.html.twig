@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div id="login-container">
+        <h1>Login</h1>
+        <form action="">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="off">
+            <label for="password">Senha</label>
+            <input  type="password" name="password" id="password" placeholder="Digite a sua senha">
+            <a href="https://www.google.com.br/" id="forgot-pass">Esqueceu a senha?</a>
+            <input type="submit" value="Login">
+            <a href="#"></a>
+        </form>
+        <div id="register-container">
+            <p>Ainda não tem uma conta?</p>
+            <a href="cadastro.html">Registrar</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+Entrar
+{% endblock %}
