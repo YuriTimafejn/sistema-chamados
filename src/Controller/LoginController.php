@@ -11,12 +11,11 @@ class LoginController extends AbstractController
     #[Route('/', name: 'login')]
     public function index(): Response
     {
-        return $this->render('login/login.html.twig', [
-            'controller_name' => 'LoginController',
-        ]);
+        return $this->render('login/login.html.twig');
     }
 
-    public function newUser()
+    #[Route('/cadastro', name: 'register')]
+    public function register(): Response
     {
         return $this->render('login/register.html.twig');
     }

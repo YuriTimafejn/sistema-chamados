@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!{% endblock %}
+{% block title %} Entrar {% endblock %}
 
 {% block body %}
 <style>
@@ -21,11 +21,7 @@
         </form>
         <div id="register-container">
             <p>Ainda não tem uma conta?</p>
-            <a href="cadastro.html">Registrar</a>
+            <a href="{{ path('register') }}">Registrar</a>
         </div>
     </div>
-{% endblock %}
-
-{% block title %}
-Entrar
 {% endblock %}
