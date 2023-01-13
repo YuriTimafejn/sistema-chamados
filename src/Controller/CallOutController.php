@@ -17,7 +17,7 @@ class CallOutController extends AbstractController
     }
 
     #[Route('/chamados/novo', name: 'chamado')]
-    public function callOutList(): Response
+    public function callOut(): Response
     {
         return $this->render('call_out/call_out.html.twig', [
             'controller_name' => 'CallOutController',
