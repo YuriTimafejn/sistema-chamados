@@ -15,7 +15,6 @@
             </div>
         </form>
 
-
         <table class="table table-striped">
             <thead>
             <tr>
@@ -46,9 +45,9 @@
         </table>
 
         <div class="row">
-            <input type="button" value="Salvar" class="col btn btn-outline-primary me-3">
-            <input type="button" value="Adicionar arquivo" class="col btn btn-outline-secondary me-3">
-            <input type="button" value="Concluir" class="col btn btn-outline-success">
+            <a href="{{ path('demanda', { id:id } ) }}" class="col btn btn-outline-primary me-3">Voltar</a>
+            <a href="#" class="col btn btn-outline-secondary me-3">Adicionar arquivo</a>
+            <a href="#" class="col btn btn-outline-success me-3">Concluir</a>
         </div>
 
     </div>

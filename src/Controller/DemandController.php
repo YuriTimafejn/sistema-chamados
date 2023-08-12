@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DemandController extends AbstractController
 {
-    #[Route('/', name: 'chamados')]
+    #[Route('/', name: 'dashboard')]
     public function index(): Response
     {
         return $this->render('demand/index.html.twig', [
@@ -28,7 +28,8 @@ class DemandController extends AbstractController
     public function demand($id): Response
     {
         return $this->render('demand/details.html.twig',[
-            'title' => 'Solicitação'
+            'title' => 'Solicitação',
+            'id' => $id,
         ]);
     }
 
@@ -36,7 +37,16 @@ class DemandController extends AbstractController
     public function history($id): Response
     {
         return $this->render('demand/history.html.twig',[
-            'title' => 'Histórico'
+            'title' => 'Histórico',
+            'id' => $id,
+        ]);
+    }
+
+    #[Route('/solicitacao/{id}/historico/{history}', name: 'atuado')]
+    public function wasDone($id, $history): Response
+    {
+        return $this->render('demand/history_detail.html.twig',[
+            'id' => $id,
         ]);
     }
 }

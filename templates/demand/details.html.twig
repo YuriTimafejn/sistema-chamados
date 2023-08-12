@@ -48,11 +48,12 @@
 
             <div class="form-control">
                 <label for="description" class="form-label">Informações</label>
-                <textarea class="form-control" id="description" name="description" rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae doloremque magnam porro quo quod repellat rerum sint? Accusantium ad dolor dolores earum harum quaerat quas saepe, soluta suscipit unde.
+                <textarea class="form-control" id="description" name="description" rows="3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae doloremque magnam porro quo quod repellat rerum sint? Accusantium ad dolor dolores earum harum quaerat quas saepe, soluta suscipit unde.
                 </textarea>
             </div>
 
-            <div class="info row mb-2">
+            <div class="row mb-2">
                 <div class="col">
                     <label for="" class="form-label">Local</label>
                     <select class="form-select" id="" name="">
@@ -70,11 +71,11 @@
                 </div>
             </div>
 
-            <div class="row">
-                <input type="button" value="Salvar" class="col btn btn-outline-primary me-3">
-                <input type="button" value="Histórico" class="col btn btn-outline-info me-3">
-                <input type="button" value="Adicionar arquivo" class="col btn btn-outline-secondary me-3">
-                <input type="button" value="Concluir" class="col btn btn-outline-success">
+            <div class="row m-2">
+                <a href="{{ path('dashboard') }}" class="col btn btn-outline-primary me-3">Salvar</a>
+                <a href="{{ path('historico',{ id:id }) }}" class="col btn btn-outline-info me-3">Histórico</a>
+                <a href="#" class="col btn btn-outline-secondary me-3">Adicionar Arquivos</a>
+                <a href="#" class="col btn btn-outline-success">Concluir</a>
             </div>
         </form>
 

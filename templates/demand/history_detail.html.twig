@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="form-control m-2">
+            <div class="d-flex justify-content-end align-content-end">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">
+                            {{ '2023-08-12 14:25:12' | date('d/m/y H:i') }}
+                        </th>
+                        <th scope="col">Elon M. Castro</th>
+                    </tr>
+                    </thead>
+                </table>
+
+            </div>
+            <div class="act">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis dolore ea eum quia quos rem sed sint voluptatum. Beatae dolores, ex inventore natus optio reprehenderit soluta ullam ut vero.
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <a href="{{ path('historico', {id: id}) }}" class="col btn btn-outline-primary m-3">Voltar</a>
+            <a href="#" class="col btn btn-outline-success m-3">Concluir</a>
+        </div>
+    </div>
+{% endblock %}
+
