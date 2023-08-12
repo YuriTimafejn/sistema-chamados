@@ -5,5 +5,79 @@
 {% endblock %}
 
 {% block body %}
+    <div class="container">
+        <div class="d-flex justify-content-end align-items-end m-lg-2">
+            <span class="badge text-bg-danger me-4">Muito Urgente</span>
+            <strong>ECG-0001/2023</strong>
+        </div>
 
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="" class="form-label">Descrição</label>
+                <input class="form-control" type="text"
+                       value="Aqui vai a descrição informada"
+                       disabled>
+            </div>
+
+            <div class="info row mb-2">
+                <div class="col">
+                    <label for="priority" class="form-label">Prioridade</label>
+                    <select class="form-select" id="priority" name="priority">
+                        <option value="1">Extremamente Urgente</option>
+                        <option value="2" selected>Muito Urgente</option>
+                        <option value="3">Urgente</option>
+                        <option value="4">Pouco Urgente</option>
+                        <option value="5">Não Urgente</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="claimer" class="form-label">Solicitante</label>
+                    <input class="form-control" id="claimer" name="claimer"
+                        value="Rafael S. Sanches" disabled>
+                </div>
+                <div class="col">
+                    <label for="queue" class="form-label">Fila</label>
+                    <select class="form-select" id="queue" name="queue">
+                        <option value="1" selected>Desenvolvimento</option>
+                        <option value="2">Suporte</option>
+                        <option value="3">QA</option>
+                        <option value="4">Comercial</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label for="description" class="form-label">Informações</label>
+                <textarea class="form-control" id="description" name="description" rows="3">
+                    lorem
+                </textarea>
+            </div>
+
+            <div class="info row mb-2">
+                <div class="col">
+                    <label for="" class="form-label">Local</label>
+                    <select class="form-select" id="" name="">
+                        <option selected>Local de implementação</option>
+                        <option value="1">Banco de dados</option>
+                        <option value="2">Tela: inicial</option>
+                        <option value="3">Tela: login</option>
+                        <option value="4">Retorno: formulario</option>
+                        <option value="5">Geral: aplicação</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="" class="form-label">Prazo</label>
+                    <input class="form-control" id="" name="" type="date">
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="button" value="Salvar" class="col btn btn-outline-primary me-3">
+                <input type="button" value="Histórico" class="col btn btn-outline-info me-3">
+                <input type="button" value="Adicionar arquivo" class="col btn btn-outline-secondary me-3">
+                <input type="button" value="Concluir" class="col btn btn-outline-success">
+            </div>
+        </form>
+
+    </div>
 {% endblock %}
