@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form class="row g-3">
+        <div class="mb-2">
+            <label for="demand" class="form-label">Demanda</label>
+            <input type="text" class="form-control" id="demand" name="demand">
+        </div>
+
+        <div class="mb-2">
+            <label for="description" class="form-label">Descrição</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <label for="priority" class="form-label">Prioridade</label>
+                <select class="form-select" id="priority" name="priority">
+                    <option selected>Prioridade</option>
+                    <option value="1">Extremamente Urgente</option>
+                    <option value="2">Muito Urgente</option>
+                    <option value="3">Urgente</option>
+                    <option value="4">Pouco Urgente</option>
+                    <option value="5">Não Urgente</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="claimer" class="form-label">Solicitante</label>
+                <input class="form-control" list="datalistOptions" id="claimer" name="claimer" placeholder="Enter com a Solicitante...">
+                <datalist id="datalistOptions">
+                    <option value="Daniela Z.">
+                    <option value="Ana Carolina">
+                    <option value="Ricardo N.">
+                    <option value="Rafael S. Sanches">
+                </datalist>
+            </div>
+            <div class="col">
+                <label for="queue" class="form-label">Fila</label>
+                <select class="form-select" id="queue" name="queue">
+                    <option selected>Prioridade</option>
+                    <option value="1">Desenvolvimento</option>
+                    <option value="2">Suporte</option>
+                    <option value="3">QA</option>
+                    <option value="4">Comercial</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-end justify-content-end">
+            <button type="submit" class="btn btn-outline-primary">Abrir solicitação</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+

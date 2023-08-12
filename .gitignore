@@ -1,3 +1,6 @@
+### batabase  ###
+./db/
+
 ### dotenv ###
 .env
 
@@ -172,4 +175,11 @@ fabric.properties
 /web/css/
 /web/js/
 
+/node_modules/
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,phpstorm,symfony
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
