@@ -25,10 +25,18 @@ class DemandController extends AbstractController
     }
 
     #[Route('/solicitacao/{id}', name: 'demanda')]
-    public function demand($id)
+    public function demand($id): Response
     {
         return $this->render('demand/details.html.twig',[
             'title' => 'Solicitação'
+        ]);
+    }
+
+    #[Route('/solicitacao/{id}/historico', name: 'historico')]
+    public function history($id): Response
+    {
+        return $this->render('demand/history.html.twig',[
+            'title' => 'Histórico'
         ]);
     }
 }
