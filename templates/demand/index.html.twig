@@ -1,20 +1,105 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CallOutController!{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-2">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Codes/php/sites/chamados/src/Controller/DemandController.php'|file_link(0) }}">src/Controller/CallOutController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Codes/php/sites/chamados/templates/demand/index.html.twig'|file_link(0) }}">templates/call_out/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <div class="col-md-6 col-12">
+                <div class="row">
+                    <div class="resumo-incidentes d-block mt-xl-5" style="height: 70vh">
+                        <h3>RESUMO INCIDENTES</h3>
+                        <h4>100 Incidentes em aberto</h4>
+                        <div class="row">
+                            <div class="col">
+                                <span class="contador" style="background-color: #7FFFD4;">17</span>
+                                Não urgente
+                            </div>
+                            <div class="col">
+                                <span class="contador" style="background-color: #20B2AA;">39</span>
+                                Menos urgente
+                            </div>
+                            <div class="col">
+                                <span class="contador" style="background-color: #98FB98;">35</span>
+                                Urgente
+                            </div>
+                            <div class="col">
+                                <span class="contador" style="background-color: #FFFF00;">8</span>
+                                Mais urgente
+                            </div>
+                            <div class="col">
+                                <span class="contador" style="background-color: #DC143C;">1</span>
+                                Extremamente urgente
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <button class="btn btn-outline-info btn-sm">GERAR RELATÓRIO</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="container">
+                    <div class="row row-cols-3 justify-content-around">
+                        <div class="col" style="display: flex; flex-wrap: wrap;">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #FFDAB9;">
+                                    <p class="fila">SUPORTE N1</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #FFFACD;">
+                                    <p class="fila">SUPORTE N2</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #87CEFA;">
+                                    <p class="fila">DESENVOLVIMENTO</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #D8BFD8;">
+                                    <p class="fila">COMERCIAL</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #FFF0F5;">
+                                    <p class="fila">PENDENTE</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #90EE90;">
+                                    <p class="fila">CONCLUIDO</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 {% endblock %}
