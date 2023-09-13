@@ -13,33 +13,23 @@
                         <h3>RESUMO INCIDENTES</h3>
                         <h4>100 Incidentes em aberto</h4>
                         <div class="row">
+
+                            {% for priority in priorities %}
                             <div class="col">
-                                <span class="contador" style="background-color: #7FFFD4;">17</span>
-                                Não urgente
+                                <div class="prioridade">
+                                    <span class="contador" style="background-color: {{ priority.color }};">17</span>
+                                    {{ priority.name | title }}
+                                </div>
                             </div>
-                            <div class="col">
-                                <span class="contador" style="background-color: #20B2AA;">39</span>
-                                Menos urgente
-                            </div>
-                            <div class="col">
-                                <span class="contador" style="background-color: #98FB98;">35</span>
-                                Urgente
-                            </div>
-                            <div class="col">
-                                <span class="contador" style="background-color: #FFFF00;">8</span>
-                                Mais urgente
-                            </div>
-                            <div class="col">
-                                <span class="contador" style="background-color: #DC143C;">1</span>
-                                Extremamente urgente
-                            </div>
+                            {% endfor %}
+
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="container">
-                        <button class="btn btn-outline-info btn-sm">GERAR RELATÓRIO</button>
+                        <button class="btn btn-info btn-sm">GERAR RELATÓRIO</button>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Priority;
 use App\Entity\Queue;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,10 +15,14 @@ class DemandController extends AbstractController
     public function index(EntityManagerInterface $entityManager): Response
     {
         $queueRepository = $entityManager->getRepository(Queue::class);
+        $priorityRepository = $entityManager->getRepository(Priority::class);
         $queues = $queueRepository->findAll();
+        $priorities =$priorityRepository->findAll();
+
         return $this->render('demand/index.html.twig', [
             'controller_name' => 'DemandController',
             'queues' => $queues,
+            'priorities' => $priorities,
         ]);
     }
 

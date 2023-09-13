@@ -19,6 +19,9 @@ body {
   font-weight: bold;
   border-radius: 10px;
 }
+.prioridade {
+  cursor:pointer;
+}
 .fila {
   margin: 0;
 }
@@ -31,6 +34,7 @@ body {
   margin: 5px;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .card-body {
   border-radius: 15%;
@@ -40,5 +44,6 @@ body {
 
   p {
     font-size: 10pt;
+    text-align: center;
   }
 }
