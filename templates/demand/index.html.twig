@@ -47,53 +47,17 @@
             <div class="col">
                 <div class="container">
                     <div class="row row-cols-3 justify-content-around">
+
+
+                        {% for queue in queues %}
                         <div class="col" style="display: flex; flex-wrap: wrap;">
                             <div class="card">
-                                <div class="card-body" style="background-color: #FFDAB9;">
-                                    <p class="fila">SUPORTE N1</p>
+                                <div class="card-body" style="background-color: {{ queue.color }};">
+                                    <p class="fila">{{ queue.name }}</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body" style="background-color: #FFFACD;">
-                                    <p class="fila">SUPORTE N2</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body" style="background-color: #87CEFA;">
-                                    <p class="fila">DESENVOLVIMENTO</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body" style="background-color: #D8BFD8;">
-                                    <p class="fila">COMERCIAL</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body" style="background-color: #FFF0F5;">
-                                    <p class="fila">PENDENTE</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body" style="background-color: #90EE90;">
-                                    <p class="fila">CONCLUIDO</p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                     </div>
                 </div>

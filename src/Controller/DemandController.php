@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Queue;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,10 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class DemandController extends AbstractController
 {
     #[Route('/', name: 'dashboard')]
-    public function index(): Response
+    public function index(EntityManagerInterface $entityManager): Response
     {
+        $queueRepository = $entityManager->getRepository(Queue::class);
+        $queues = $queueRepository->findAll();
         return $this->render('demand/index.html.twig', [
             'controller_name' => 'DemandController',
+            'queues' => $queues,
         ]);
     }
 
